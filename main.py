@@ -6,9 +6,9 @@ from discord.ext import commands
 from googleapiclient.discovery import build
 from giphy_client.rest import ApiException
 
-TOKEN = "MTAwMzA3NDU4NzQ3MjQ0MTM5NA.GjUAaJ.muk8XRLoUXeEcmfy7k0OAR7Exg4u4jGD7neJgM"  #Bot Token
-google_search_api_key = "AIzaSyDrw6XvXQbcYfHQWW54GHL3Us0Fj7IrkBA"  #Google API key
-giphy_search_api_key = "lbm3JP1gQRXcOejzr9D9DBSkyU0MeOSL"  #GIPHY API key
+TOKEN = "YOUR TOKEN"  #Bot Token
+google_search_api_key = "YOUR API KEY"  #Google API key
+giphy_search_api_key = "YOUR API KEY"  #GIPHY API key
 #cx is Google Search Engine ID
 
 def main():
@@ -23,7 +23,7 @@ def main():
         ran = random.randint(0, 9)
         resource = build("customsearch", "v1", developerKey=google_search_api_key).cse()
         result = resource.list(
-            q=f"{search}", cx="51d03d688da4c4c2f", searchType="image"
+            q=f"{search}", cx="YOUR ID GOOGLE SEARCH", searchType="image"
         ).execute()
         url = result["items"][ran]["link"]
         embed1 = discord.Embed(title=f"This is the image ({search}) you reserch|")
