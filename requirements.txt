@@ -4,3 +4,4 @@ google-api_python_client
 pytest
 pytest-mock
 pytest-cov
+pytest-asyncio
