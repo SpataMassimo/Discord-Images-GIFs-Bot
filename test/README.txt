@@ -1,0 +1,1 @@
+This section contains the files needed to pytest some features of the Discord Bot. 
