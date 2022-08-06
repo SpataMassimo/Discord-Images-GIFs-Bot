@@ -1,6 +1,7 @@
 discord
 giphy_client
 google-api_python_client
+dpytest
 pytest
 pytest-mock
 pytest-cov
