@@ -6,7 +6,7 @@ import discord.ext.test as dpytest
 import src.main as main
 
 @pytest.mark.asyncio
-async def test_show_image(bot,capsys):
+async def test_show_image(bot):
     guild = bot.guilds[0]
     channel = guild.text_channels[0]
 
