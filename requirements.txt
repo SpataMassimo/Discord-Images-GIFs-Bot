@@ -1,6 +1,0 @@
-discord
-giphy_client
-google-api_python_client
-pytest
-pytest-mock
-pytest-cov

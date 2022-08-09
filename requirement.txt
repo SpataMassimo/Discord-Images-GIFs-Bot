@@ -1,0 +1,8 @@
+discord
+giphy_client
+google-api-python-client
+dpytest
+pytest
+pytest-mock
+pytest-cov
+pytest-asyncio
