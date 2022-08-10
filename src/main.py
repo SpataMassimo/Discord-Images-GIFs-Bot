@@ -3,7 +3,10 @@ import giphy_client
 from discord.ext import commands
 from googleapiclient.discovery import build
 from giphy_client.rest import ApiException
-from shared import config_map
+import yaml
+
+with open('./../config/config-default.yml', 'r') as yaml_config:
+    config_map = yaml.load(yaml_config, Loader=yaml.SafeLoader)
 
 TOKEN=config_map['token']
 google_search_api_key = config_map['google_token']
