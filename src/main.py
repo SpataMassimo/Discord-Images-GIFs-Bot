@@ -3,17 +3,21 @@ import giphy_client
 from discord.ext import commands
 from googleapiclient.discovery import build
 from giphy_client.rest import ApiException
+import yaml
 
-TOKEN="Your token"
-google_search_api_key = "YOUR API KEY" 
-giphy_search_api_key = "YOUR API KEY"
+with open('config/config-default.yml', 'r') as yaml_config:
+    config_map = yaml.load(yaml_config, Loader=yaml.SafeLoader)
+
+TOKEN=config_map['token']
+google_search_api_key = config_map['google_token']
+giphy_search_api_key = config_map['giphy_token']
 
 def main():
     client = commands.Bot(command_prefix="$")
     
     @client.command(aliases=["show"])
     async def show_image(ctx, *, search):
-        url =  ((build("customsearch", "v1", developerKey=google_search_api_key).cse()).list(q=f"{search}", cx="YOUR GOOGLE ID", searchType="image").execute())["items"][0]["link"]
+        url =  ((build("customsearch", "v1", developerKey=google_search_api_key).cse()).list(q=f"{search}", cx=config_map['id_token'], searchType="image").execute())["items"][0]["link"]
         await ctx.send(embed = (discord.Embed(title=f"This is the image ({search}) you reserch|").set_image(url=url)))
         api_instance = giphy_client.DefaultApi()
         try:
