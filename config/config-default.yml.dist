@@ -1,0 +1,11 @@
+prefix: "$"
+
+token: "MY_BOT_TOKEN"
+
+google_token: "MY_GOOGLE_TOKEN"
+
+giphy_token: "MY_GIPHY_TOKEN"
+
+id_token: "MY_GOOGLE_ID"
+
+    
