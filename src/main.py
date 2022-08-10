@@ -5,7 +5,7 @@ from googleapiclient.discovery import build
 from giphy_client.rest import ApiException
 import yaml
 
-with open('config/config-default.yml', 'r') as yaml_config:
+with open('config/config-default.yml.dist', 'r') as yaml_config:
     config_map = yaml.load(yaml_config, Loader=yaml.SafeLoader)
 
 TOKEN=config_map['token']
